@@ -586,7 +586,7 @@
 		}
 	}
 
-	input[type="text"], input[type="email"]
+	input[type="text"], input[type="email"], textarea
 	{
 		padding: 0.5rem 1rem;
 		border-width: 0 0 1px 0;
@@ -594,13 +594,16 @@
 		border-color: #B99A92;
 	}
 
-	input:focus
+	input:focus, textarea:focus
 	{
 		outline: none;
 		padding: 0.5rem 1rem;
 		border-width: 0 0 1px 0;
 		border-style: solid;
 		border-color: #F28873;
+	}
+	textarea, textarea::placeholder {
+		font-family: sans-serif;
 	}
 
 	.form-item label 
@@ -663,4 +666,33 @@
 		gap: 2rem;
 	}
 }
+
 /* #endregion */
+
+#kontakt {
+	display: none;
+	position:fixed;
+	top: 50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.link_button {
+	border: none;
+	font-size: 1rem;
+	text-decoration: underline;
+	color:#666666
+}
+
+.xclass {
+	display: flex;
+	justify-content: end;
+}
+
+.close_button {
+	border:none;
+	border-radius: 100%;
+	
+	width: 2rem;
+	height: 2rem;
+}
